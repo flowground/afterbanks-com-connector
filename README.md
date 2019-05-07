@@ -1,11 +1,11 @@
-# ![LOGO](logo.png) Afterbanks MSP Connector
+# ![LOGO](logo.png) Afterbanks **flow**ground Connector
 
 ## Description
 
-A generated MSP connector for the Afterbanks API (version 3.0.0).
+A generated **flow**ground connector for the Afterbanks API (version 3.0.0).
 
 Generated from: https://api.apis.guru/v2/specs/afterbanks.com/3.0.0/swagger.json<br/>
-Generated at: 2019-05-07T11:15:14+03:00
+Generated at: 2019-05-07T17:34:49+03:00
 
 ## API Description
 
@@ -53,7 +53,7 @@ This API does not require authorization.
 
 ## License
 
-flowground :- Telekom iPaaS / afterbanks-com-connector<br/>
+**flow**ground :- Telekom iPaaS / afterbanks-com-connector<br/>
 Copyright © 2019, [Deutsche Telekom AG](https://www.telekom.de)<br/>
 contact: flowground@telekom.de
 
