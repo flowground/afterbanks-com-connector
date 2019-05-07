@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "servicekey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

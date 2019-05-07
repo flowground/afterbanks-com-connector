@@ -1,0 +1,85 @@
+{
+    "title": "Afterbanks",
+    "description": "La estandarizacion de la conexion con cualquier banco en tiempo real.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/afterbanks.com/3.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://www.afterbanks.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_forms": {
+            "main": "./lib/actions/get_forms.js",
+            "title": "Lista de bancos soportados",
+            "description": "Obten una lista completa de los bancos soportados, asi como los nombres de los campos necesarios para dibujar un formulario de login similar al oritinal del banco.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_me": {
+            "main": "./lib/actions/post_me.js",
+            "title": "Informacion de uso de mi licencia",
+            "description": "Devuelve informacion sobre mi licencia y uso de llamadas",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_me.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_serviceV3": {
+            "main": "./lib/actions/post_serviceV3.js",
+            "title": "Posicion global y movimientos hasta una fecha dada.",
+            "description": "Este endpoint devuelve el listado de productos y los movimientos para cada uno de los productos desde la fecha solicidata hasta el dia actual. Existe un sandbox donde probar llamadas: https://www.afterbanks.com/sandbox/\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_serviceV3.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

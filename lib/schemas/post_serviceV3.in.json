@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "servicekey": {
+            "required": true,
+            "type": "string"
+        },
+        "service": {
+            "required": true,
+            "type": "string"
+        },
+        "documentType": {
+            "required": false,
+            "type": "number",
+            "format": "int32"
+        },
+        "user": {
+            "required": true,
+            "type": "string"
+        },
+        "pass": {
+            "required": true,
+            "type": "string"
+        },
+        "pass2": {
+            "required": false,
+            "type": "string"
+        },
+        "products": {
+            "required": false,
+            "type": "string"
+        },
+        "startdate": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
